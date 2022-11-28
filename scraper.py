@@ -4,7 +4,7 @@ from io import BytesIO
 from bs4 import BeautifulSoup
 class WordReader:
     def wordfile(self):
-        self.wordFile = urlopen("http://pythonscraping.com/pages/AWordDocument.docx").read()
+        self.wordFile = urlopen("https://calibre-ebook.com/downloads/demos/demo.docx").read()
         self.wordFile= BytesIO(self.wordFile)
         self.document = ZipFile(self.wordFile)
         self.xml_content = self.document.read('word/document.xml')
